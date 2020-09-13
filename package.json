@@ -1,6 +1,6 @@
 {
   "name": "@scribe-systems/scribe-connect-api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Scribe connect API",
   "main": "index.ts",
   "repository": "git@github.com:scribe-systems-sp/scribe-connect-api.git",
