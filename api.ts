@@ -153,7 +153,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        aliveApiV1AliveGet: async (options: any = {}): Promise<RequestArgs> => {
+        apiV1Alive: async (options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/scribe_connect/api/v1/alive`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, 'https://example.com');
@@ -190,10 +190,10 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        changePasswordApiV1ChangePasswordPatch: async (changePasswordRequest: ChangePasswordRequest, options: any = {}): Promise<RequestArgs> => {
+        apiV1ChangePassword: async (changePasswordRequest: ChangePasswordRequest, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'changePasswordRequest' is not null or undefined
             if (changePasswordRequest === null || changePasswordRequest === undefined) {
-                throw new RequiredError('changePasswordRequest','Required parameter changePasswordRequest was null or undefined when calling changePasswordApiV1ChangePasswordPatch.');
+                throw new RequiredError('changePasswordRequest','Required parameter changePasswordRequest was null or undefined when calling apiV1ChangePassword.');
             }
             const localVarPath = `/scribe_connect/api/v1/changePassword`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -241,10 +241,10 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        connectApiV1ConnectPost: async (connectRequest: ConnectRequest, options: any = {}): Promise<RequestArgs> => {
+        apiV1Connect: async (connectRequest: ConnectRequest, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'connectRequest' is not null or undefined
             if (connectRequest === null || connectRequest === undefined) {
-                throw new RequiredError('connectRequest','Required parameter connectRequest was null or undefined when calling connectApiV1ConnectPost.');
+                throw new RequiredError('connectRequest','Required parameter connectRequest was null or undefined when calling apiV1Connect.');
             }
             const localVarPath = `/scribe_connect/api/v1/connect`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -291,7 +291,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getNetworksApiV1NetworksGet: async (options: any = {}): Promise<RequestArgs> => {
+        apiV1GetNetworks: async (options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/scribe_connect/api/v1/networks`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, 'https://example.com');
@@ -334,10 +334,10 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        hotspotApiV1HotspotPost: async (hotSpotRequest: HotSpotRequest, options: any = {}): Promise<RequestArgs> => {
+        apiV1Hotspot: async (hotSpotRequest: HotSpotRequest, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'hotSpotRequest' is not null or undefined
             if (hotSpotRequest === null || hotSpotRequest === undefined) {
-                throw new RequiredError('hotSpotRequest','Required parameter hotSpotRequest was null or undefined when calling hotspotApiV1HotspotPost.');
+                throw new RequiredError('hotSpotRequest','Required parameter hotSpotRequest was null or undefined when calling apiV1Hotspot.');
             }
             const localVarPath = `/scribe_connect/api/v1/hotspot`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -384,7 +384,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        infoApiV1InfoGet: async (options: any = {}): Promise<RequestArgs> => {
+        apiV1Info: async (options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/scribe_connect/api/v1/info`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, 'https://example.com');
@@ -427,10 +427,10 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        loginApiV1LoginGet: async (password: string, options: any = {}): Promise<RequestArgs> => {
+        apiV1Login: async (password: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'password' is not null or undefined
             if (password === null || password === undefined) {
-                throw new RequiredError('password','Required parameter password was null or undefined when calling loginApiV1LoginGet.');
+                throw new RequiredError('password','Required parameter password was null or undefined when calling apiV1Login.');
             }
             const localVarPath = `/scribe_connect/api/v1/login`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -471,7 +471,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        scanApiV1ScanPost: async (options: any = {}): Promise<RequestArgs> => {
+        apiV1Scan: async (options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/scribe_connect/api/v1/scan`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, 'https://example.com');
@@ -522,8 +522,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async aliveApiV1AliveGet(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).aliveApiV1AliveGet(options);
+        async apiV1Alive(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).apiV1Alive(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -536,8 +536,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async changePasswordApiV1ChangePasswordPatch(changePasswordRequest: ChangePasswordRequest, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).changePasswordApiV1ChangePasswordPatch(changePasswordRequest, options);
+        async apiV1ChangePassword(changePasswordRequest: ChangePasswordRequest, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).apiV1ChangePassword(changePasswordRequest, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -550,8 +550,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async connectApiV1ConnectPost(connectRequest: ConnectRequest, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).connectApiV1ConnectPost(connectRequest, options);
+        async apiV1Connect(connectRequest: ConnectRequest, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).apiV1Connect(connectRequest, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -563,8 +563,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getNetworksApiV1NetworksGet(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<NetworksResponse>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getNetworksApiV1NetworksGet(options);
+        async apiV1GetNetworks(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<NetworksResponse>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).apiV1GetNetworks(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -577,8 +577,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async hotspotApiV1HotspotPost(hotSpotRequest: HotSpotRequest, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).hotspotApiV1HotspotPost(hotSpotRequest, options);
+        async apiV1Hotspot(hotSpotRequest: HotSpotRequest, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).apiV1Hotspot(hotSpotRequest, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -590,8 +590,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async infoApiV1InfoGet(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<any>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).infoApiV1InfoGet(options);
+        async apiV1Info(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<any>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).apiV1Info(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -604,8 +604,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async loginApiV1LoginGet(password: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<LoginResponse>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).loginApiV1LoginGet(password, options);
+        async apiV1Login(password: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<LoginResponse>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).apiV1Login(password, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -617,8 +617,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async scanApiV1ScanPost(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).scanApiV1ScanPost(options);
+        async apiV1Scan(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).apiV1Scan(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -639,8 +639,8 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        aliveApiV1AliveGet(options?: any): AxiosPromise<object> {
-            return DefaultApiFp(configuration).aliveApiV1AliveGet(options).then((request) => request(axios, basePath));
+        apiV1Alive(options?: any): AxiosPromise<object> {
+            return DefaultApiFp(configuration).apiV1Alive(options).then((request) => request(axios, basePath));
         },
         /**
          * Change password
@@ -649,8 +649,8 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        changePasswordApiV1ChangePasswordPatch(changePasswordRequest: ChangePasswordRequest, options?: any): AxiosPromise<object> {
-            return DefaultApiFp(configuration).changePasswordApiV1ChangePasswordPatch(changePasswordRequest, options).then((request) => request(axios, basePath));
+        apiV1ChangePassword(changePasswordRequest: ChangePasswordRequest, options?: any): AxiosPromise<object> {
+            return DefaultApiFp(configuration).apiV1ChangePassword(changePasswordRequest, options).then((request) => request(axios, basePath));
         },
         /**
          * Connect device to the WiFi network.
@@ -659,8 +659,8 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        connectApiV1ConnectPost(connectRequest: ConnectRequest, options?: any): AxiosPromise<object> {
-            return DefaultApiFp(configuration).connectApiV1ConnectPost(connectRequest, options).then((request) => request(axios, basePath));
+        apiV1Connect(connectRequest: ConnectRequest, options?: any): AxiosPromise<object> {
+            return DefaultApiFp(configuration).apiV1Connect(connectRequest, options).then((request) => request(axios, basePath));
         },
         /**
          * Get list of previously scanned networks. If networks wasnt scanned - it will response with error.
@@ -668,8 +668,8 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getNetworksApiV1NetworksGet(options?: any): AxiosPromise<NetworksResponse> {
-            return DefaultApiFp(configuration).getNetworksApiV1NetworksGet(options).then((request) => request(axios, basePath));
+        apiV1GetNetworks(options?: any): AxiosPromise<NetworksResponse> {
+            return DefaultApiFp(configuration).apiV1GetNetworks(options).then((request) => request(axios, basePath));
         },
         /**
          * Create hotspot. If device was connected to wifi network, it will be disconnected.
@@ -678,8 +678,8 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        hotspotApiV1HotspotPost(hotSpotRequest: HotSpotRequest, options?: any): AxiosPromise<object> {
-            return DefaultApiFp(configuration).hotspotApiV1HotspotPost(hotSpotRequest, options).then((request) => request(axios, basePath));
+        apiV1Hotspot(hotSpotRequest: HotSpotRequest, options?: any): AxiosPromise<object> {
+            return DefaultApiFp(configuration).apiV1Hotspot(hotSpotRequest, options).then((request) => request(axios, basePath));
         },
         /**
          * Get information about cuurent state of the device.
@@ -687,8 +687,8 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        infoApiV1InfoGet(options?: any): AxiosPromise<any> {
-            return DefaultApiFp(configuration).infoApiV1InfoGet(options).then((request) => request(axios, basePath));
+        apiV1Info(options?: any): AxiosPromise<any> {
+            return DefaultApiFp(configuration).apiV1Info(options).then((request) => request(axios, basePath));
         },
         /**
          * Verifies provided password. Responses with alive=True if password is correct.
@@ -697,8 +697,8 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        loginApiV1LoginGet(password: string, options?: any): AxiosPromise<LoginResponse> {
-            return DefaultApiFp(configuration).loginApiV1LoginGet(password, options).then((request) => request(axios, basePath));
+        apiV1Login(password: string, options?: any): AxiosPromise<LoginResponse> {
+            return DefaultApiFp(configuration).apiV1Login(password, options).then((request) => request(axios, basePath));
         },
         /**
          * Scan for nearby wifi networks. If device currenctly in hotspot mode - hotspot will be suspended.
@@ -706,8 +706,8 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        scanApiV1ScanPost(options?: any): AxiosPromise<object> {
-            return DefaultApiFp(configuration).scanApiV1ScanPost(options).then((request) => request(axios, basePath));
+        apiV1Scan(options?: any): AxiosPromise<object> {
+            return DefaultApiFp(configuration).apiV1Scan(options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -726,8 +726,8 @@ export class DefaultApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public aliveApiV1AliveGet(options?: any) {
-        return DefaultApiFp(this.configuration).aliveApiV1AliveGet(options).then((request) => request(this.axios, this.basePath));
+    public apiV1Alive(options?: any) {
+        return DefaultApiFp(this.configuration).apiV1Alive(options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -738,8 +738,8 @@ export class DefaultApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public changePasswordApiV1ChangePasswordPatch(changePasswordRequest: ChangePasswordRequest, options?: any) {
-        return DefaultApiFp(this.configuration).changePasswordApiV1ChangePasswordPatch(changePasswordRequest, options).then((request) => request(this.axios, this.basePath));
+    public apiV1ChangePassword(changePasswordRequest: ChangePasswordRequest, options?: any) {
+        return DefaultApiFp(this.configuration).apiV1ChangePassword(changePasswordRequest, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -750,8 +750,8 @@ export class DefaultApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public connectApiV1ConnectPost(connectRequest: ConnectRequest, options?: any) {
-        return DefaultApiFp(this.configuration).connectApiV1ConnectPost(connectRequest, options).then((request) => request(this.axios, this.basePath));
+    public apiV1Connect(connectRequest: ConnectRequest, options?: any) {
+        return DefaultApiFp(this.configuration).apiV1Connect(connectRequest, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -761,8 +761,8 @@ export class DefaultApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public getNetworksApiV1NetworksGet(options?: any) {
-        return DefaultApiFp(this.configuration).getNetworksApiV1NetworksGet(options).then((request) => request(this.axios, this.basePath));
+    public apiV1GetNetworks(options?: any) {
+        return DefaultApiFp(this.configuration).apiV1GetNetworks(options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -773,8 +773,8 @@ export class DefaultApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public hotspotApiV1HotspotPost(hotSpotRequest: HotSpotRequest, options?: any) {
-        return DefaultApiFp(this.configuration).hotspotApiV1HotspotPost(hotSpotRequest, options).then((request) => request(this.axios, this.basePath));
+    public apiV1Hotspot(hotSpotRequest: HotSpotRequest, options?: any) {
+        return DefaultApiFp(this.configuration).apiV1Hotspot(hotSpotRequest, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -784,8 +784,8 @@ export class DefaultApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public infoApiV1InfoGet(options?: any) {
-        return DefaultApiFp(this.configuration).infoApiV1InfoGet(options).then((request) => request(this.axios, this.basePath));
+    public apiV1Info(options?: any) {
+        return DefaultApiFp(this.configuration).apiV1Info(options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -796,8 +796,8 @@ export class DefaultApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public loginApiV1LoginGet(password: string, options?: any) {
-        return DefaultApiFp(this.configuration).loginApiV1LoginGet(password, options).then((request) => request(this.axios, this.basePath));
+    public apiV1Login(password: string, options?: any) {
+        return DefaultApiFp(this.configuration).apiV1Login(password, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -807,8 +807,8 @@ export class DefaultApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public scanApiV1ScanPost(options?: any) {
-        return DefaultApiFp(this.configuration).scanApiV1ScanPost(options).then((request) => request(this.axios, this.basePath));
+    public apiV1Scan(options?: any) {
+        return DefaultApiFp(this.configuration).apiV1Scan(options).then((request) => request(this.axios, this.basePath));
     }
 }
 
