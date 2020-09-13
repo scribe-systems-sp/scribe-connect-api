@@ -1,0 +1,9 @@
+{
+  "name": "@scribe-systems/scribe-connect-api",
+  "version": "1.0.0",
+  "description": "Scribe connect API",
+  "main": "index.ts",
+  "repository": "git@github.com:scribe-systems-sp/scribe-connect-api.git",
+  "author": "Scribe Systems sp. z o. o.",
+  "license": "MIT"
+}
